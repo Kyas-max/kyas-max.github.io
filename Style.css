@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.3em;
+}
+
+header {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(./Asset/Image/landscape_2.jpg);
+    background-size: cover;
+}
+
+.navbar {
+    position: absolute;
+    padding:  50px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+}
+
+.navbar a:hover {
+    font-weight: bold;
+    color: rgb(97, 88, 88);
+}
+
+.navbar .Logo {
+    width: 200px;
+    height: 200px;
+}
+
+.navbar .nav-links ul {
+    display: flex;
+}
+
+.navbar .nav-links ul li {
+    margin: 0 25px;
+}
+
+.navbar .Menu {
+    display: none;
+    position: absolute;
+    top: 140px;
+    right: 50px;
+    width: 35px;
+}
+
+@media screen and (max-width: 900px) {
+    .navbar {
+        padding: 0;
+    }
+
+    .nav-links {
+        top: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.17);
+        backdrop-filter: blur(8px);
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+
+    
+
+    .nav-links .img {
+        backdrop-filter: blur(0px);
+    }
+
+    .nav-links.mobile-menu {
+        margin-left: 0;
+    }
+
+    .nav-links ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .Menu {
+        display: block;
+    }
+
+    .navbar .nav-links ul li {
+        margin: 25px 0px;
+        font-size: 1.5em;
+    }
+
+    .navbar .Logo {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+    }
+    
+}
